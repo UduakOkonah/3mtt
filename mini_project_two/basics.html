@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Adventures</title>
+    <link rel="stylesheet" href="basic.css">
+</head>
+<body>
+
+<!-- Objective: This mini-project aims to create a structured personal webpage 
+     that includes navigation, an about section, a blog post, and a sign-up form.
+     The goal is to provide an interactive user experience using fundamental HTML elements.
+ -->
+
+       <!-- Header Section -->
+     <header>
+        <h1>My Web Adventures</h1>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#login">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm a passionate web explorer and developer!</p>
+        <a href="https://adventures.com">Visit my blog!</a>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2>Latest Blog Posts</h2>
+        <article>
+            <h3>The Future of Web Development</h3>
+            <p>Explore the latest trends in web design, including AI, responsive UI, and accessibility.</p>
+        </article>
+        <article>
+            <h3>How to Create a Stunning Website</h3>
+            <p>Learn the essential steps for building a professional and modern website.</p>
+        </article>
+    </section>
+
+    <!-- Signup Form -->
+    <section>
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <input type="submit" value="Sign Up">
+        </form>
+    </section>
+
+    <!-- Login Form -->
+    <section id="login">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="login-email">Email:</label>
+            <input type="email" id="login-email" name="email" required>
+
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required>
+
+            <input type="submit" value="Login">
+        </form>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="contact-name">Name:</label>
+            <input type="text" id="contact-name" name="name" required>
+
+            <label for="contact-email">Email:</label>
+            <input type="email" id="contact-email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; <span id="year"></span> My Web Adventures</p>
+    </footer>
+
+    <script src="basic.js"></script>
+</body>
+</html>
+
+</body>
+</html>
