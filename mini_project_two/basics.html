@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Web Adventures</title>
-    <link rel="stylesheet" href="basic.css">
 </head>
 <body>
 
@@ -12,6 +11,149 @@
      that includes navigation, an about section, a blog post, and a sign-up form.
      The goal is to provide an interactive user experience using fundamental HTML elements.
  -->
+
+<style>
+    /* Global Styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #ff6600;
+    --background-color: #f8f9fa;
+    --text-color: #222f3e;
+    --accent-color: #1e3799;
+    --light-gray: #95a5a6;
+}
+ body {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 0;
+    margin: 0 auto;
+}
+
+
+header {
+    background-color: var(--primary-color);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    height: 100px;
+}
+
+/* Navigation Styling (Different Color & Right-Aligned) */
+nav{
+    background-color: var(--secondary-color);
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    }
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #003366;
+    color: white;
+    padding: 10px;
+} 
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    nav {
+        position: static;
+        background: var(--secondary-color);
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 0;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+</style>
 
        <!-- Header Section -->
      <header>
@@ -98,7 +240,35 @@
         <p>&copy; <span id="year"></span> My Web Adventures</p>
     </footer>
 
-    <script src="basic.js"></script>
+    <script>
+        // Responsive Navbar Toggle
+document.querySelector(".menu-toggle").addEventListener("click", function () {
+    document.querySelector(".nav-links").classList.toggle("active");
+});
+
+// Dynamic Year in Footer
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Form Validations
+function validateForm(formId) {
+    document.getElementById(formId).addEventListener("submit", function (event) {
+        let inputs = this.querySelectorAll("input, textarea");
+        for (let input of inputs) {
+            if (input.value.trim() === "") {
+                alert("Please fill out all fields.");
+                event.preventDefault();
+                return;
+            }
+        }
+        alert("Form submitted successfully!");
+    });
+}
+
+validateForm("signupForm");
+validateForm("loginForm");
+validateForm("contactForm");
+
+    </script>
 </body>
 </html>
 

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion & Sewing Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #fffaf0;
+            color: #333;
+        }
+        header, footer {
+            background: #8B0000;
+            color: white;
+            padding: 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background: #A52A2A;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background: #fff;
+            color: #A52A2A;
+            border-radius: 5px;
+        }
+        #hero {
+            background: #ffe4e1;
+            padding: 50px;
+        }
+
+        .cta-button {
+            background: #ff5733;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #e64a19;
+        }
+
+        .features-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .feature {
+            width: 30%;
+            padding: 20px;
+            background: white;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+        input {
+            padding: 10px;
+            width: 80%;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .button {
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #c0392b;
+        }
+
+        footer {
+            color: white;
+            padding: 10px;
+            margin-top: 30px;
+            font-size: 12px;
+        }
+        
+        @media (max-width: 768px) {
+            .features-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .feature {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Fashion & Sewing Hub</h1>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <section id="hero">
+        <h2>Discover Elegant Fashion Creations</h2>
+        <p>Explore our custom sewing and fashion design services tailored just for you.</p>
+        <button class="cta-button">Sign Up Now</button>
+    </section>
+    
+    <section id="features">
+        <h2>Our Specialties</h2>
+        <div class="features-container">
+            <div class="feature">
+                <img src="images/OIP (2).jpeg" alt="Custom Designs">
+                <h3>Custom Designs</h3>
+                <p>Get tailor-made outfits designed to fit you perfectly.</p>
+            </div>
+            <div class="feature">
+                <img src="images/quality.jpeg" alt="Quality Fabrics">
+                <h3>Quality Fabrics</h3>
+                <p>We use only the best materials for a luxurious feel.</p>
+            </div>
+            <div class="feature">
+                <img src="images/fast.jpeg" alt="Fast Delivery">
+                <h3>Fast Delivery</h3>
+                <p>Receive your custom orders quickly and efficiently.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a team of professional designers passionate about fashion and sewing.</p>
+    </section>
+    
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <p>See what our clients have to say about our work.</p>
+    </section>
+    
+    <section>
+        <h2>Enroll Here</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <input class="button" type="submit" value="Submit">
+        </form>
+    </section>
+    
+    <footer>
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me for collaboration or networking:</p>
+        <p>Email: udokonah@gmail.com - Social Media: @Uduakobong15904</p>
+        <p>&copy; 2025 Fashion & Sewing Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
